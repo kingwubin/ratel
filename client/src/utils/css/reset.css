@@ -1,0 +1,75 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big,
+cite, code, del, dfn, em, font, img,
+ins, kbd, q, s, samp, small, strike,
+strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+center, u, b, i {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 100%;
+    vertical-align: baseline;
+    font-family: arial , '幼圆' , 'PingFang SC', 'STHeitiSC-Light', 'Helvetica-Light', arial, sans-serif
+}
+body {
+    line-height: 1;
+    background: #113454;
+}
+:focus {
+    outline: 0
+}
+ol, ul {
+    list-style: none
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+blockquote:before, blockquote:after, q:before, q:after {
+    content: ""
+}
+blockquote, q {
+    quotes: ""
+}
+input, textarea {
+    margin: 0;
+    padding: 0
+}
+hr {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    color: #000;
+    background-color: #000;
+    height: 1px
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  background-color: transparent;
+}
+
+/*滑块*/
+::-webkit-scrollbar-thumb:vertical {
+  background-color: #4ea6de;
+}
+
+/*滑道*/
+::-webkit-scrollbar-track:vertical {
+  background-color: #05111f;
+}
+
+*{
+  color:#f4f4f6;
+}
+
+.ant-calendar-picker-container {
+  z-index: 1050;
+}

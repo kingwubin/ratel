@@ -1,0 +1,247 @@
+@import "./variable.less";
+//背景图片
+.background(@url) {
+  background-size: 100% 100%;
+  background-image: ~"url(@{url})";
+  background-repeat: no-repeat;
+}
+
+.logo(@url) {
+  display: inline-block;
+  line-height: 100px;
+  margin-left: 10px;
+  height: 30px;
+  width: 30px;
+  background-image: ~"url(@{url})";
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+//大边框
+.panel(@url) {
+  background: ~"url(@{url})";
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+//小盒子边框
+.box() {
+  box-shadow: inset 0 0 1px 1px #000;
+  border: 1px solid #4ca7de;
+}
+//大盒子边框
+.bigBox() {
+  box-shadow: inset 0 0 20px 8px #135588;
+  border: 1px solid #3ed6ff;
+}
+
+//表格标题样式
+.table-title(@height: 66px) {
+  margin: 0 10px;
+  padding: 0 10px;
+  height: @height;
+  line-height: @height;
+  font-size: @font-size-title;
+  font-weight: @font-weight;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: 1px solid #3ed6ff;
+  box-shadow: 0 0 20px 0 rgba(0, 142, 183, .75) inset;
+}
+
+//表格偶数行样式
+.table-even(@height:66px) {
+  margin: 0 10px;
+  padding: 0 10px;
+  height: @height;
+  line-height: @height;
+  font-size: @font-size-title;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border-top: 1px solid #37bee5;
+  border-bottom: 1px solid #37bee5;
+  background: @color-bg-table-even;
+  &:hover {
+    background: @color-bg-table-hover;
+  }
+}
+
+//表格基数行样式
+.table-odd(@height:66px) {
+  margin: 0 10px;
+  padding: 0 10px;
+  height: @height;
+  line-height: @height;
+  font-size: @font-size-title;
+  &:hover {
+    background: @color-bg-table-hover;
+  }
+}
+
+//图表容器,适用于各种容器
+.container() {
+  border: 1px solid #3bcaf2;
+  box-shadow: 0 0 20px 0 rgba(10, 133, 234, 0.75) inset;
+}
+
+//值的边框
+.value() {
+  border: 1px solid #06e8ff;
+  padding: 5px;
+  border-radius: 5px;
+  background: @color-bg-title;
+}
+
+//不换行省略
+.noWrap() {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+//input样式
+.input(@height:55px,@width:100px,@fontSize:@font-size-state) {
+  border: 2px solid #3bcaf2;
+  padding: 20px;
+  background-color: transparent;
+  height: @height;
+  font-size: @fontSize;
+  width: @width;
+}
+
+//button样式
+.button(@height:55px,@width:100px,@fontSize:@font-size-badge,@backgroudColor:transparent,@borderRadius:0) {
+  border: 1px solid #3bcaf2;
+  background-color: @backgroudColor;
+  height: @height;
+  font-size: @fontSize;
+  width: @width;
+  border-radius: @borderRadius;
+}
+
+/*  修改日历控件类型 */
+.time() {
+  /*  修改日历控件类型 */
+  &::-webkit-datetime-edit {
+    padding: 1px;
+    color: #f5f5f5;
+    background: rgba(0, 0, 0, 0);
+  }
+  /*控制编辑区域的*/
+  &::-webkit-datetime-edit-fields-wrapper {
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 18px;
+    line-height: 34px;
+  }
+  /*控制年月日这个区域的*/
+  &::-webkit-datetime-edit-text {
+    color: #f5f5f5;
+    padding: 0;
+  }
+  /*这是控制年月日之间的斜线或短横线的*/
+  &::-webkit-datetime-edit-year-field {
+    background-color: rgba(0, 0, 0, 0);
+    color: #f5f5f5;
+  }
+  /*控制年文字, 如2013四个字母占据的那片地方*/
+  &::-webkit-datetime-edit-month-field {
+    background-color: rgba(0, 0, 0, 0);
+    color: #f5f5f5;
+  }
+  /*控制月份*/
+  &::-webkit-datetime-edit-day-field {
+    background-color: rgba(0, 0, 0, 0);
+    color: #f5f5f5;
+  }
+  /*控制具体日子*/
+  &::-webkit-inner-spin-button {
+    visibility: hidden;
+  }
+  /*这是控制上下小箭头的*/
+  &::-webkit-calendar-picker-indicator { /*这是控制下拉小箭头的*/
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    box-shadow: inset 0 1px #fff, 0 1px #eee;
+    background-color: #eee;
+    background-image: -webkit-linear-gradient(top, #f0f0f0, #e6e6e6);
+    color: #666;
+    margin-right: 1px;
+  }
+  &::-webkit-clear-button { /*控制清除按钮*/
+    visibility: hidden;
+  }
+}
+
+//进度条
+.progressSave() {
+  width: 100%;
+  margin: 10px 0;
+  height: 8px;
+  border: 1px solid #155484;
+  background-color: #0f314d;
+  &::-webkit-progress-bar {
+    box-sizing: border-box;
+    background-color: #0f314d;
+  }
+  &::-webkit-progress-value {
+    background: -webkit-linear-gradient(0deg, #429d15 0, #54ff00 100%);
+  }
+}
+
+.progressWarn() {
+  width: 100%;
+  margin: 10px 0;
+  height: 8px;
+  border: 1px solid #155484;
+  background-color: #0f314d;
+  &::-webkit-progress-bar {
+    box-sizing: border-box;
+    background-color: #0f314d;
+  }
+  &::-webkit-progress-value {
+    background: -webkit-linear-gradient(0deg, #9f0b0b 0, #ff2525 100%);
+  }
+}
+
+/*管理界面 查询功能*/
+//通用按钮 可以作为查询按钮、保存按钮、添加按钮、确认按钮等
+.normalButton() {
+  padding: 0 20px;
+  line-height: 36px;
+  border-radius: 50px;
+  border: solid 1px #3bcaf2;
+  background-color: @color-bg-add;
+  cursor: pointer;
+  &:hover {
+    border-left: 1px solid #3ed6ff;
+    border-right: 1px solid #3ed6ff;
+    transition: border-color 1s;
+    background: #2a8dbb;
+  }
+}
+//搜索标签 label
+.searchLabel() {
+  display: inline-block;
+  width: 110px;
+  text-align: center;
+  line-height: 38px;
+  background-color: @color-bg-add;
+  border-right: solid 1px #3bcaf2;
+}
+//搜索文本框 input
+.searchInput() {
+  background-color: transparent;
+  border: transparent;
+  width: 290px;
+  text-indent: 10px;
+  color:@color-text-default;
+  &::-webkit-input-placeholder {
+    color: #fff;
+  }
+  &:-moz-placeholder {
+    color: #fff;
+  }
+  &:-ms-input-placeholder {
+    color: #fff;
+  }
+}

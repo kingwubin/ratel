@@ -1,0 +1,20 @@
+{
+  "name": "ratel",
+  "version": "0.0.1",
+  "description": "modern project",
+  "main": "index.js",
+  "scripts": {
+    "clientStart": "cd client && npm run start",
+    "serverStart:dev": "cd server && npm run dev",
+    "serverStart:prd": "cd server && npm run prd",
+    "start": "npm run clientStart && npm run serverStart",
+    "build": "cd client && npm run build",
+    "build:dll": "cd client && npm run build:dll",
+    "clientInstall": "cd client && npm install",
+    "serverInstall": "cd server && npm install"
+  },
+  "author": "wubin",
+  "license": "ISC",
+  "devDependencies": {},
+  "dependencies": {}
+}

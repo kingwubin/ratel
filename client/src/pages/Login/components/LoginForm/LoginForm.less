@@ -1,0 +1,120 @@
+@import "../../../../utils/css/mixin.less";
+
+.login {
+  .background('./images/bg.jpg');
+  overflow: hidden;
+  position: relative;
+  height: 100vh;
+  .loginTitle {
+    width: 841px;
+    height: 137px;
+    margin: 300px auto;
+    .background('./images/login.png');
+    animation: unvisible ease-in-out 1s 1s;
+    animation-fill-mode: forwards;
+  }
+  .loginForm {
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    width: 550px;
+    height: 550px;
+    margin: 7% auto;
+    color: #fff;
+    animation: visible ease-in-out 1s 2s;
+    animation-fill-mode: forwards;
+    .background('./images/circle.png');
+    > label {
+      margin: 150px auto 0;
+      display: block;
+      width: 322px;
+      height: 61px;
+      .background('./images/textinCircle.png');
+    }
+    >input{
+      display: block;
+      width: 322px;
+      line-height: 40px;
+      margin: 30px auto;
+      font-size: 18px;
+      font-weight: normal;
+      border: 2px solid #00f5ff;
+      background-color: transparent;
+      box-shadow: 0 0 5px #000 inset;
+    }
+    .userName {
+      text-indent:40px;
+      background-image: url("./images/userName.png");
+      background-repeat: no-repeat;
+      background-position: 10px 10px;
+      background-size: 21px 21px;
+      &:focus {
+        box-shadow: 2px 2px 10px #4ca7de;
+      }
+      &::-webkit-input-placeholder {
+        color: #fff;
+      }
+      &:-moz-placeholder {
+        color: #fff;
+      }
+      &:-ms-input-placeholder {
+        color: #fff;
+      }
+    }
+    .passWord {
+      text-indent:40px;
+      background-image: url("./images/password.png");
+      background-repeat: no-repeat;
+      background-position: 10px 10px;
+      background-size: 21px 21px;
+      &:focus {
+        box-shadow: 2px 2px 10px #4ca7de;
+      }
+      &::-webkit-input-placeholder {
+        color: #fff;
+      }
+      &:-moz-placeholder {
+        color: #fff;
+      }
+      &:-ms-input-placeholder {
+        color: #fff;
+      }
+    }
+    .submit{
+      cursor: pointer;
+      .background('./images/submit.png');
+      border: none;
+    }
+  }
+}
+
+@-webkit-keyframes unvisible {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+@-webkit-keyframes visible {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  90% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 1;
+  }
+}

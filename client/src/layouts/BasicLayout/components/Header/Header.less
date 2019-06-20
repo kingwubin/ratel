@@ -1,0 +1,311 @@
+@import "../../../../utils/css/mixin";
+@import "../../../../utils/css/variable";
+.header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  border-bottom:3px solid #22cada;
+  border-image: -webkit-linear-gradient(to right,#14405f,#22cada,#14405f) 30 30;
+  border-image: -moz-linear-gradient(to right,#14405f,#22cada,#14405f) 30 30;
+  border-image: linear-gradient(to right,#14405f,#22cada,#14405f) 30 30;
+  >li:nth-child(1){
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    >span:nth-child(1){
+
+    }
+    >span:nth-child(2){
+      margin-left: 10px;
+      font-size: 32px;
+      color: #d1dadf;
+    }
+  };
+  >li:nth-child(2){
+    flex:1
+  };
+  >li:nth-child(3){
+    display: flex;
+    align-items: center;
+    >a{
+      box-sizing: border-box;
+      display: inline-block;
+      margin-right:15px;
+      height: 30px;
+      width: 30px;
+      border: 2px solid #0f92b0;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    >button{
+      box-sizing: border-box;
+      display: inline-block;
+      margin-right:15px;
+      height: 30px;
+      width: 30px;
+      border: 2px solid #0f92b0;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    >a:nth-child(1){
+      background: url("./images/icon-header-home.png") center center no-repeat;
+      background-size: 16px 16px;
+    }
+    >a:nth-child(2){
+      background: url("./images/icon-header-back.png") center center no-repeat;
+      background-size: 16px 16px;
+    }
+    >a:nth-child(3){
+      background: url("./images/icon-header-setting.png") center center no-repeat;
+      background-size: 16px 16px;
+    }
+    >a:nth-child(4){
+      background: url("./images/icon-header-onDuty.png") center center no-repeat;
+      background-size: 16px 16px;
+    }
+    >a:nth-child(5){
+      background: url("./images/icon-header-alarm.png") center center no-repeat;
+      background-size: 16px 16px;
+    }
+    >a:nth-child(6){
+      background: url("./images/icon-header-user.png") center center no-repeat;
+      background-size: 16px 16px;
+    }
+    >i:nth-child(7){
+      position: absolute;
+      right: 59px;
+      top: 33px;
+      display: block;
+      background: #ff0000;
+      color: #fff;
+      font-size: 12px;
+      padding: 5px;
+      border-radius: 10px;
+      text-align: left;
+    }
+    >a:hover{
+      background-color: #0f92b0;
+      box-shadow: 0 0 10px #1890ff;
+    }
+    >a:hover{
+      background-color: #0f92b0;
+      box-shadow: 0 0 10px #1890ff;
+    }
+  };
+}
+
+//logo
+//网络状况
+.networkState{
+  .logo("./images/icon-networkstatus.png");
+}
+
+//集群状态
+.clusterStatus{
+  .logo("./images/icon-clusterstatus.png");
+}
+
+//故障状态
+.failureStatus{
+  .logo("./images/icon-failurestatus.png");
+}
+
+//日常巡检
+.dailyInspection{
+  .logo("./images/icon-dailyInspection.png");
+}
+
+//重点监控
+.keyMonitor{
+  .logo("./images/icon-keymonitor.png");
+}
+
+//业务能力
+.workAbility{
+  .logo("./images/icon-workability.png");
+}
+
+//智能运维
+.smartTransport{
+  .logo("./images/icon-smarttransport.png");
+}
+
+//虚拟机房
+.virtualRoom{
+  .logo("./images/icon-virtualroom.png");
+}
+
+//运维信息
+.operationalInfo{
+  .logo("./images/icon-operationalinfo.png");
+}
+
+//资源管理
+.resourceManage{
+  .logo("./images/icon-resourcemanage.png");
+}
+
+//告警管理
+.alarmManagement{
+  .logo("./images/icon-alarmManagement.png");
+}
+
+//告警列表单元弹出模态框--告警处理
+//模态框头
+.modelheader{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  height: 50px;
+  background: #1e5376;
+  >label:nth-child(1){
+    font-size: 18px;
+  }
+  >label:nth-child(2){
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+     // .background('./images/closed.png')
+  }
+}
+//模态框体
+.body{
+  background-color: #193756;
+  >ul{
+    li{
+      margin-left: 10px;
+      padding-top: 15px;
+      display: flex;
+      flex-direction: row;
+      >span {
+        font-size: 18px;
+        color: #00ffff;
+      }
+      >div {
+        width: 360px;
+        height: 40px;
+        .box();
+        margin-right: 20px;
+        label{
+          display: inline-block;
+          width: 115px;
+          text-align: center;
+          line-height: 38px;
+          background-color: @color-bg-add;
+          border-right: solid 1px #3bcaf2;
+        }
+        select{
+          background-color: transparent;
+          border: transparent;
+          width: 240px;
+          text-indent: 10px;
+          color:@color-text-default;
+          font-size: @font-size-badge;
+          >option{
+            background-color: #193756;
+          }
+        }
+        input {
+          background-color: transparent;
+          border: transparent;
+          width: 240px;
+          text-indent: 10px;
+          color:@color-text-default;
+          font-size: @font-size-badge;
+        }
+      }
+    }
+  }
+}
+//模态框脚
+.footer{
+  background-color: #193756;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 10px;
+  button{
+    margin-left: 10px;
+    height: 40px;
+    padding: 0 20px;
+    display: inline-block;
+    border-radius: 50px;
+    border: solid 1px #3bcaf2;
+    background-color: #1f6a8d;
+    font-size: 18px;
+    cursor: pointer;
+  }
+}
+//模态框样式end
+
+//值班人员start
+.cycle {
+  display: flex;
+  justify-content: flex-end;
+  li {
+    display: inline-block;
+    height:40px;
+    margin: 15px 15px 15px 0 !important;
+    padding: 0 20px !important;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 20px;
+    font-size: 18px;
+    background-color: #154c70;
+    transition: border-color 1s;
+    cursor: pointer;
+    border: 1px solid #154c70;
+    &:hover {
+      border: 1px solid #25feff;
+    }
+  }
+  .selected {
+    border: 1px solid #25feff;
+    background-color: rgba(0,0,0,0);
+  }
+}
+//值班人员 end
+//用户信息模态框体start
+.userbody{
+  background-color: #193756;
+  >ul{
+    padding-top: 50px;
+    li {
+      text-align: center;
+      color: #06e8ff;
+      font-size: 18px;
+      line-height: 40px;
+    }
+    >li:nth-child(1) {
+      font-size: 38px;
+      line-height: 70px;
+    }
+  }
+}
+
+//模态框脚
+.userfooter{
+  background-color: #193756;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 10px;
+  button{
+    margin-left: 10px;
+    height: 40px;
+    padding: 0 20px;
+    display: inline-block;
+    border-radius: 50px;
+    border: solid 1px #b40102;
+    background-color: #ec414d;
+    font-size: 18px;
+    cursor: pointer;
+  }
+}
+//用户信息模态框体end
