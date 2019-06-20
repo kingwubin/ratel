@@ -11,7 +11,8 @@
     "build": "cd client && npm run build",
     "build:dll": "cd client && npm run build:dll",
     "clientInstall": "cd client && npm install",
-    "serverInstall": "cd server && npm install"
+    "serverInstall": "cd server && npm install",
+    "install": "npm run clientInstall && npm run serverInstall"
   },
   "author": "wubin",
   "license": "ISC",
