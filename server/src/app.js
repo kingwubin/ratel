@@ -24,7 +24,7 @@ app.use(json());
 app.use(logger());
 
 const ENV = process.env.NODE_ENV;
-console.log('ENV', ENV)
+
 if (ENV !== 'production') {
     // 开发环境 / 测试环境
     app.use(morgan('dev'))

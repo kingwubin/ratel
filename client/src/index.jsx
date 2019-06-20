@@ -7,7 +7,6 @@ import Router from './router';
 import 'antd/dist/antd.css';
 import './utils/css/reset.css';
 
-console.log(React, '蔡徐坤');
 const store = getStore();
 const RATEL_CONTAINER = document.getElementById('ratel');
 
