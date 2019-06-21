@@ -11,7 +11,6 @@ router.post('/login', async function (ctx, next) {
     const data = await login(username, password)
     console.log('蔡徐坤');
     console.error('橙丝带')
-    /*
     if (data.username) {
         // 设置 session
         ctx.session.usename = data.usename;
@@ -21,12 +20,6 @@ router.post('/login', async function (ctx, next) {
         return
     }
     ctx.body = new ErrorModel('登录失败')
-    */
-    ctx.session.usename = data.usename;
-    ctx.session.realname = data.realname;
-
-    ctx.body = new SuccessModel()
-    return
 })
 
 // 文件下载测试
