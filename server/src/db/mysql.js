@@ -11,6 +11,7 @@ function exec(sql) {
     const promise = new Promise((resolve, reject) => {
         con.query(sql, (err, result) => {
             if (err) {
+                console.log(err, 'MySQL连接失败')
                 reject(err)
                 return
             }
