@@ -32,7 +32,7 @@ if (env === 'production') {
     // redis
     REDIS_CONF = {
         port: 6379,
-        host: '47.101.194.184'
+        host: 'localhost'
     }
 }
 
