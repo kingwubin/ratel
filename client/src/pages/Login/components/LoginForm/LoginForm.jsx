@@ -37,8 +37,9 @@ class LoginForm extends Component {
   }
 
   handleSubmit = (event) => {
+    console.log('蔡徐坤');
     const { name, password } = this.state;
-    const { history } = this.props;;
+    const { history } = this.props;
     event.preventDefault();
     if (name === '') {
       this.userName.current.setCustomValidity('用户名不能为空');
@@ -50,6 +51,7 @@ class LoginForm extends Component {
       this.userPassword.current.style.border = '2px solid #f00';
       return;
     }
+    history.push('/menu');
     login(name, password).then((res) => {
       console.log(res)
       history.push('/menu');
