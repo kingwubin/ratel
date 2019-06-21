@@ -37,7 +37,6 @@ class LoginForm extends Component {
   }
 
   handleSubmit = (event) => {
-    console.log('蔡徐坤');
     const { name, password } = this.state;
     const { history } = this.props;
     event.preventDefault();
@@ -51,14 +50,11 @@ class LoginForm extends Component {
       this.userPassword.current.style.border = '2px solid #f00';
       return;
     }
-    history.push('/menu');
     login(name, password).then((res) => {
-      console.log(res)
-      history.push('/menu');
-      /* if (res.data && res.data.errno === 0) {
+      if (res.data && res.data.errno === 0) {
         history.push('/menu');
         return;
-      } */
+      }
       message.info('请输入正确的用户名和密码');
     });
   };

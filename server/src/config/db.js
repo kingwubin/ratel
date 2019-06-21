@@ -20,7 +20,6 @@ if (env === 'dev') {
 }
 
 if (env === 'production') {
-    console.log('mysql数据库', 'production')
     // mysql
     MYSQL_CONF = {
         host: 'localhost',
