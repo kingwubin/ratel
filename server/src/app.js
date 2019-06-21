@@ -30,7 +30,7 @@ if (ENV !== 'production') {
     app.use(morgan('dev'))
 } else {
     // 线上环境
-    const logFileName = path.join(__dirname, 'log', 'access.log')
+    const logFileName = path.join(__dirname, 'log', 'out.log')
     const writeStream = fs.createWriteStream(logFileName, {
         flags: 'a'
     })

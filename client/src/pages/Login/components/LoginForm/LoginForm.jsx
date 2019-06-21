@@ -39,8 +39,7 @@ class LoginForm extends Component {
 
   handleSubmit = (event) => {
     const { name, password } = this.state;
-    const { history } = this.props;
-    console.log('aaa');
+    const { history } = this.props;;
     event.preventDefault();
     if (name === '') {
       this.userName.current.setCustomValidity('用户名不能为空');
@@ -63,7 +62,6 @@ class LoginForm extends Component {
 
   render() {
     const { name, password } = this.state;
-    console.log(testImage);
     return (
       <section className={style.login}>
         <div className={style.loginTitle} />
