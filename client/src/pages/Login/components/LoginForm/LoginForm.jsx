@@ -4,6 +4,7 @@ import { withRouter } from 'react-router-dom';
 import { message } from 'antd';
 import { login } from '../../../../api/login';
 import style from './LoginForm.less';
+import testImage from './images/bg.jpg';
 
 @withRouter
 class LoginForm extends Component {
@@ -53,17 +54,16 @@ class LoginForm extends Component {
     }
     login(name, password).then((res) => {
       if (res.data && res.data.errno === 0) {
-        console.log('蔡徐坤');
         history.push('/menu');
         return;
       }
-      console.log(message, message.error);
       message.info('请输入正确的用户名和密码');
     });
   };
 
   render() {
     const { name, password } = this.state;
+    console.log(testImage);
     return (
       <section className={style.login}>
         <div className={style.loginTitle} />

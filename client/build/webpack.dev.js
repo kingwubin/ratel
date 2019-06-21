@@ -52,6 +52,10 @@ const devConfig = {
         use: [
           {
             loader: 'url-loader',
+            options: {
+              limit: 100,
+              outputPath: 'images',
+            },
           },
         ],
       },

@@ -1,4 +1,5 @@
 const merge = require('webpack-merge');
+const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const commonConfig = require('./webpack.common');
@@ -53,9 +54,9 @@ const proConfig = {
             loader: 'url-loader',
             options: {
               name: '[name][hash].[ext]',
-              outputPath: 'images/',
-              limit: 8192,
-              quality: 85,
+              outputPath: './images/',
+              publicPath: '../images',
+              limit: 100,
             },
           },
         ],
@@ -67,8 +68,8 @@ const proConfig = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'css/[name].[hash].css',
-      chunkFilename: 'css/[name].chunk.css',
+      filename: './css/[name].[hash].css',
+      chunkFilename: './css/[name].chunk.css',
     }),
   ],
   output: {
