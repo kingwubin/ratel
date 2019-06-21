@@ -4,7 +4,6 @@ import { withRouter } from 'react-router-dom';
 import { message } from 'antd';
 import { login } from '../../../../api/login';
 import style from './LoginForm.less';
-import testImage from './images/bg.jpg';
 
 @withRouter
 class LoginForm extends Component {
