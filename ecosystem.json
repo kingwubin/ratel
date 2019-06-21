@@ -8,7 +8,10 @@
       },
       "env_production": {
         "NODE_ENV": "production"
-      }
+      },
+      "error_file": "server/src/logs/err.log",
+      "out_file": "server/src/logs/out.log",
+      "log_date_format": "YYYY-MM-DD HH:mm:ss"
     }
   ],
   "deploy": {
