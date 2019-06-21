@@ -26,7 +26,7 @@ if (env === 'production') {
     MYSQL_CONF = {
         host: '47.101.194.184',
         user: 'root',
-        password: 'MyNewPass!4',
+        password: 'MyNewPass4!',
         port: '3306',
         database: 'myblog'
     };
