@@ -12,7 +12,6 @@ if (env === 'dev') {
         port: '3306',
         database: 'myblog'
     };
-exit
     // redis
     REDIS_CONF = {
         port: 6379,
@@ -24,7 +23,7 @@ if (env === 'production') {
     console.log('mysql数据库', 'production')
     // mysql
     MYSQL_CONF = {
-        host: '47.101.194.184',
+        host: 'localhost',
         user: 'root',
         password: 'MyNewPass4!',
         port: '3306',
