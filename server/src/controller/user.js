@@ -26,6 +26,7 @@ const login = async (username) => {
         select username, realname from users where username=${username}
         `
     const rows = await exec(sql)
+    console.log('rows',rows)
     return rows[0] || {}
 };
 

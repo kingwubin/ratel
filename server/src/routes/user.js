@@ -7,10 +7,10 @@ const router = new Router();
 router.prefix('/api/user');
 
 router.post('/login', async function (ctx, next) {
+    console.log('蔡徐坤');
     const { username, password } = ctx.request.body;
     const data = await login(username, password)
-    console.log('蔡徐坤');
-    //console.error('橙丝带')
+    console.log('蔡徐坤',data);
     ctx.body = new SuccessModel()
     if (data.username) {
         // 设置 session
