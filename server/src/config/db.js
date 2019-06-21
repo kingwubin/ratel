@@ -12,7 +12,7 @@ if (env === 'dev') {
         port: '3306',
         database: 'myblog'
     };
-
+exit
     // redis
     REDIS_CONF = {
         port: 6379,
