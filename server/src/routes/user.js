@@ -10,7 +10,8 @@ router.post('/login', async function (ctx, next) {
     const { username, password } = ctx.request.body;
     const data = await login(username, password)
     console.log('蔡徐坤');
-    console.error('橙丝带')
+    //console.error('橙丝带')
+    ctx.body = new SuccessModel()
     if (data.username) {
         // 设置 session
         ctx.session.usename = data.usename;
