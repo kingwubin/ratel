@@ -1,5 +1,5 @@
 const merge = require('webpack-merge');
-const path = require('path');
+// const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const commonConfig = require('./webpack.common');
@@ -56,6 +56,20 @@ const proConfig = {
               name: '[name][hash].[ext]',
               outputPath: './images/',
               publicPath: '../images',
+              limit: 100,
+            },
+          },
+        ],
+      },
+      {
+        test: /\.mp3$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              name: '[name][hash].[ext]',
+              outputPath: './images/',
+              publicPath: './images',
               limit: 100,
             },
           },

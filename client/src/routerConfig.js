@@ -1,5 +1,6 @@
 import Login from './pages/Login';
 import Menu from './pages/Menu';
+import Test from './pages/Test';
 
 const routerConfig = [
   {
@@ -10,6 +11,11 @@ const routerConfig = [
   {
     path: '/menu',
     component: Menu,
+    exact: true,
+  },
+  {
+    path: '/test',
+    component: Test,
     exact: true,
   },
 ];

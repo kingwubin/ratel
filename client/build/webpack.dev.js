@@ -48,7 +48,7 @@ const devConfig = {
         ],
       },
       {
-        test: /\.(jpg|jpeg|webp|svg|gif|png)$/,
+        test: /\.(jpg|jpeg|webp|svg|gif|png|mp3)$/,
         use: [
           {
             loader: 'url-loader',

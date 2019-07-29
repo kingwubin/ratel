@@ -37,7 +37,7 @@ export default function NotFound() {
               <Link to="/">
                 首页
               </Link>
-              继续浏览
+              继续浏览1111
             </p>
           </div>
         </div>

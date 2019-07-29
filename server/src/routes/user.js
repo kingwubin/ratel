@@ -22,7 +22,7 @@ router.post('/login', async function (ctx, next) {
 
 // 文件下载测试
 router.get('/download', async function (ctx, next) {
-    console.log('蔡徐坤')
+    console.log('蔡徐坤');
     ctx.set({
         'Content-Disposition':  'attachment;filename="james.txt"'
     })
