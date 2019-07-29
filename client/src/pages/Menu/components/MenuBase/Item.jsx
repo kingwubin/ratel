@@ -18,6 +18,7 @@ export default function Item(props) {
         <div>
           <label>
             {name}
+            dsds
           </label>
           <label>
             {description}
